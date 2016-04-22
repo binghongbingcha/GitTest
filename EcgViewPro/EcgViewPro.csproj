@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5A8EA9BC-F25F-4FFE-BA9C-AAFF69484AF0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EcgViewPro</RootNamespace>
+    <AssemblyName>YJLECG</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Common.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v14.1.Core, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v14.1.Core, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v14.1.Core, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v14.1.Core, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v14.1.Core, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.1.UI, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Gma.QrCodeNet.Encoding">
+      <HintPath>C:\Users\hbb\Desktop\Gma.QrCodeNet.Demo\bin\Release\Gma.QrCodeNet.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="InTheHand.Net.Personal">
+      <HintPath>C:\Users\hbb\Downloads\InTheHand.Net.Personal\InTheHand.Net.Personal.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\心电图信息网络管理系统（老王）(32 位)\YJLECGView\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SQLite, Version=1.0.98.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutUs.designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BloodSugarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodSugarForm.Designer.cs">
+      <DependentUpon>BloodSugarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BloodPressureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodPressureForm.Designer.cs">
+      <DependentUpon>BloodPressureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChineseJP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DisplayColorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayColorForm.Designer.cs">
+      <DependentUpon>DisplayColorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorManageForm.Designer.cs">
+      <DependentUpon>DoctorManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EcgDataDrawNew.cs" />
+    <Compile Include="EcgDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EcgDoctor.designer.cs">
+      <DependentUpon>EcgDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EcgForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EcgForm.Designer.cs">
+      <DependentUpon>EcgForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EcgGatherFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EcgGatherFrm.designer.cs">
+      <DependentUpon>EcgGatherFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EcgViewFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EcgViewFrm.Designer.cs">
+      <DependentUpon>EcgViewFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HosptialForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HosptialForm.Designer.cs">
+      <DependentUpon>HosptialForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeadSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeadSetForm.Designer.cs">
+      <DependentUpon>LeadSetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientInfoForm.Designer.cs">
+      <DependentUpon>PatientInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemoteServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoteServiceForm.Designer.cs">
+      <DependentUpon>RemoteServiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RtWave.cs" />
+    <Compile Include="BloodOxygenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodOxygenForm.designer.cs">
+      <DependentUpon>BloodOxygenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pager.designer.cs">
+      <DependentUpon>Pager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientManageFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientManageFrm.Designer.cs">
+      <DependentUpon>PatientManageFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientMd.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BloodSugarForm.resx">
+      <DependentUpon>BloodSugarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BloodPressureForm.resx">
+      <DependentUpon>BloodPressureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayColorForm.resx">
+      <DependentUpon>DisplayColorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorManageForm.resx">
+      <DependentUpon>DoctorManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EcgDoctor.resx">
+      <DependentUpon>EcgDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EcgForm.resx">
+      <DependentUpon>EcgForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EcgGatherFrm.resx">
+      <DependentUpon>EcgGatherFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EcgViewFrm.resx">
+      <DependentUpon>EcgViewFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HosptialForm.resx">
+      <DependentUpon>HosptialForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeadSetForm.resx">
+      <DependentUpon>LeadSetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BloodOxygenForm.resx">
+      <DependentUpon>BloodOxygenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientInfoForm.resx">
+      <DependentUpon>PatientInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="RemoteServiceForm.resx">
+      <DependentUpon>RemoteServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pager.resx">
+      <DependentUpon>Pager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManageFrm.resx">
+      <DependentUpon>PatientManageFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SystemForm.resx">
+      <DependentUpon>SystemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSetForm.resx">
+      <DependentUpon>SystemSetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TemperatureForm.resx">
+      <DependentUpon>TemperatureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestWebBrowser.resx">
+      <DependentUpon>TestWebBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UrineForm.resx">
+      <DependentUpon>UrineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SystemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemForm.Designer.cs">
+      <DependentUpon>SystemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemSetForm.Designer.cs">
+      <DependentUpon>SystemSetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TemperatureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TemperatureForm.designer.cs">
+      <DependentUpon>TemperatureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestWebBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestWebBrowser.Designer.cs">
+      <DependentUpon>TestWebBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UrineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UrineForm.Designer.cs">
+      <DependentUpon>UrineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WatchDog.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\心电背景图.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\exitAfter.png" />
+    <None Include="Resources\cjStart.png" />
+    <None Include="Resources\cjStop.png" />
+    <None Include="Resources\chongcai.png" />
+    <None Include="Resources\chongcaiAfter.png" />
+    <None Include="Resources\Formlogo.jpg" />
+    <None Include="Resources\login.jpg" />
+    <None Include="Resources\photo.jpg" />
+    <None Include="Resources\photo.png" />
+    <None Include="Resources\jizhumima.jpg" />
+    <None Include="Resources\xuetanglog.jpg" />
+    <None Include="Resources\temp.jpg" />
+    <None Include="Resources\niaochangguilog.jpg" />
+    <None Include="Resources\Urine.jpg" />
+    <None Include="Resources\Spo2.jpg" />
+    <None Include="Resources\EcgLogo.jpg" />
+    <None Include="Resources\RigthLogo.png" />
+    <None Include="Resources\yishengAfter.jpg" />
+    <None Include="Resources\xueyangAfter.jpg" />
+    <None Include="Resources\xueyaAfter.jpg" />
+    <None Include="Resources\xuetangAfter.jpg" />
+    <None Include="Resources\xitongAfter.jpg" />
+    <None Include="Resources\xinxiAfter.jpg" />
+    <None Include="Resources\xindianAfter.jpg" />
+    <None Include="Resources\tiwenAfter.jpg" />
+    <None Include="Resources\niaochangguiAfter.jpg" />
+    <None Include="Resources\jiankangAfter.jpg" />
+    <None Include="Resources\jiankuang.jpg" />
+    <None Include="Resources\xitong.jpg" />
+    <None Include="Resources\yisheng.jpg" />
+    <None Include="Resources\niaochanggui.jpg" />
+    <None Include="Resources\xuetang.jpg" />
+    <None Include="Resources\tiwen.jpg" />
+    <None Include="Resources\xueyang.jpg" />
+    <None Include="Resources\xueya.jpg" />
+    <None Include="Resources\xindian.jpg" />
+    <None Include="Resources\jiankang.jpg" />
+    <None Include="Resources\xinxi.jpg" />
+    <None Include="Resources\ZhiShi.jpg" />
+    <None Include="Resources\xueyalog.jpg" />
+    <None Include="Resources\peidai2.jpg" />
+    <None Include="Resources\peidai1.jpg" />
+    <None Include="Resources\xzDianJi.jpg" />
+    <None Include="Resources\peidai.jpg" />
+    <None Include="Resources\paidai.jpg" />
+    <None Include="Resources\peijian.jpg" />
+    <None Include="Resources\xitong.png" />
+    <None Include="Resources\zDianJi.jpg" />
+    <None Include="Resources\xDianJi.jpg" />
+    <None Include="Resources\yisheng.png" />
+    <None Include="Resources\jiankuang.png" />
+    <None Include="Resources\xuetang.png" />
+    <None Include="Resources\niaochanggui.png" />
+    <None Include="Resources\xueyang.png" />
+    <None Include="Resources\xueya.png" />
+    <None Include="Resources\xinxi.png" />
+    <None Include="Resources\xindian.png" />
+    <None Include="Resources\tiwen.png" />
+    <None Include="Resources\2018.png" />
+    <None Include="Resources\2017.png" />
+    <None Include="Resources\2016.png" />
+    <None Include="Resources\temp.bmp" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CommonProj\CommonProj.csproj">
+      <Project>{477214ed-fe25-43ff-b772-2a1fdf58caa8}</Project>
+      <Name>CommonProj</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
