@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  coze-customer-service:
+    build: .
+    container_name: coze-customer-service
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+      - DEBUG=false
+    env_file:
+      - .env
+    volumes:
+      - ./logs:/app/logs
+    networks:
+      - coze-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # 可选：添加Redis缓存
+  # redis:
+  #   image: redis:7-alpine
+  #   container_name: coze-redis
+  #   restart: unless-stopped
+  #   ports:
+  #     - "6379:6379"
+  #   volumes:
+  #     - redis_data:/data
+  #   networks:
+  #     - coze-network
+
+  # 可选：添加Nginx反向代理
+  # nginx:
+  #   image: nginx:alpine
+  #   container_name: coze-nginx
+  #   restart: unless-stopped
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
+  #   volumes:
+  #     - ./nginx.conf:/etc/nginx/nginx.conf:ro
+  #     - ./ssl:/etc/nginx/ssl:ro
+  #   depends_on:
+  #     - coze-customer-service
+  #   networks:
+  #     - coze-network
+
+networks:
+  coze-network:
+    driver: bridge
+
+volumes:
+  redis_data:
